@@ -1,0 +1,13 @@
+site_name: OpenQKDSecurity V2
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Deployment: deployment.md
+  - User Guide: user_guide.md
+  - Code of Research Papers: research_code.md
+  - Contribute: contribute.md
+theme: readthedocs
+markdown_extensions:
+  - attr_list
+plugins:
+  - mkdocs-pdf
