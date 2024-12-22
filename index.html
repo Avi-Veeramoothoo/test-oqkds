@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>OpenQKDSecurity V2</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Home";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> OpenQKDSecurity V2
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Home</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#about">About</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#current-status">Current Status</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#citing">Citing</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#contributing">Contributing</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#license">License</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#acknowledgements">Acknowledgements</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="installation/">Installation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="deployment/">Deployment</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="user_guide/">User Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="research_code/">Code of Research Papers</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="contribute/">Contribute</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">OpenQKDSecurity V2</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Home</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div><h1 id="openqkdsecurity-software">OpenQKDSecurity Software</h1>
+<p>Github Code Release: <a href="https://github.com/JBurniston/openQKDSecurityV2">Version 2.0</a><br>
+Research Group: <a href="https://lutkenhausgroup.wordpress.com/">Optical Quantum Communication Theory Group</a><br>
+University of Waterloo: <a href="https://uwaterloo.ca/institute-for-quantum-computing/profiles/norbert-lutkenhaus">Institute for Quantum Computing</a></p>
+<!-- ![Remote Image](https://lutkenhausgroup.wordpress.com/wp-content/uploads/2022/03/cropped-grouppicture.jpg) -->
+<p><img src="https://lutkenhausgroup.wordpress.com/wp-content/uploads/2022/03/cropped-grouppicture.jpg" alt="Group Image" width="400"></p>
+<p><a href="https://doi.org/10.5281/zenodo.14262568"><img alt="DOI" src="https://zenodo.org/badge/402256220.svg"></a></p>
+<h2 id="about">About</h2>
+<p>OpenQKDSecurity is a software package based in MATLAB that allows users to calculate key rates for quantum key distribution (QKD) protocols using the <a href="https://quantum-journal.org/papers/q-2018-07-26-77/">Winick et al. framework</a> (<a href="https://arxiv.org/abs/1710.05511">arXiv</a>). It is extensible, allowing for user-defined protocols to be implemented, and modular, allowing for users to change specific aspects of a protocol. Our software can be used to interface with experimental data, demonstrate the theoretical scalability of protocols in various conditions, and optimize parameters to maximize key rate. Its modular structure helps break down the colossal task of calculating key rates into small areas that require only domain specific knowledge. Therefore, no single person must be an expert in all areas.</p>
+<p>We break down a numerical QKD security proof into a preset and 5 different modules described below:</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Difficulty</th>
+<th>Audience</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Preset</td>
+<td>Basic to Intermediate</td>
+<td>Everyone</td>
+<td>The Preset sets up a QKD protocol by defining parameters, options and modules to use. Use cases range from simply picking a predefined preset and tweaking parameters to selection of modules and technical options.</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Intermediate</td>
+<td>Users with intermediate knowledge of QKD protocols, including proof techniques.</td>
+<td>Using the initial parameters given in the preset, a description module constructs complete description of a QKD protocol. Measurement observables, announcement structure, and the key map are typically defined on this layer.</td>
+</tr>
+<tr>
+<td>Channel</td>
+<td>Intermediate</td>
+<td>Users with intermediate to advanced knowledge of channel simulation or computing key rate from experimental data.</td>
+<td>The channel module produces expectation values or observed frequencies from Alice and Bob's measurements on their exchanged states. These values can be obtained from numerical simulation or imported from an external source. Experimental data should also be loaded in this layer.</td>
+</tr>
+<tr>
+<td>Key Rate</td>
+<td>Advanced</td>
+<td>Users with advanced knowledge of numerical proof techniques in QKD.</td>
+<td>This layer is responsible for determining the key rate of a class of protocols based on the given parameters. Proof techniques such as decoy state analysis and squashing should be implemented in this layer. This layer is also responsible for processing input to be forwarded to the math solver.</td>
+</tr>
+<tr>
+<td>Math Solver</td>
+<td>Advanced</td>
+<td>Users with advanced knowledge of convex optimization.</td>
+<td>Calculates a strict lower bound on the quantum relative entropy between the key and Eve via convex optimization.</td>
+</tr>
+<tr>
+<td>Optimizer</td>
+<td>Advanced</td>
+<td>Users with knowledge of general optimization techniques with the intent to minimize the number of calls to the objective function needed to find the global maximum.</td>
+<td>Routines to perform unstructured optimization on selected parameters, using the key rate as the objective. This layer is given a wrapped version of the protocol with options modified to reduce precision but decrease calculation time.</td>
+</tr>
+</tbody>
+</table>
+<p>Once parameters, modules, and options are packaged into a preset file, running a numerical key rate calculation is as simple as:</p>
+<pre><code class="language-matlab">% Qubit BB84 prepare and measure. We use Schmidt decomposition to reduce
+% the dimension of Alice's state for enhanced speed and stability.
+qkdInput = BasicBB84Alice2DPreset();
+
+%run the QKDSolver with this input
+results = MainIteration(qkdInput);
+
+%save the results and preset to a file.
+save("BasicBB84Alice2DResults.mat","results","qkdInput");
+
+%% plot the result
+QKDPlot.simple1DPlot(qkdInput,results)
+</code></pre>
+<p>Further documentation and examples may be found in the included user guide PDF.</p>
+<h2 id="current-status">Current Status</h2>
+<p>Currently in this version of the software, we provide the following example protocols:</p>
+<ul>
+<li>
+<p>Qubit BB84 with no loss, where Alice is 4-dimensional</p>
+</li>
+<li>
+<p>Qubit BB84 with no loss, where Alice has been reduced to two dimensions (this reduction is used in all of the following protocols)</p>
+</li>
+<li>
+<p>Qubit BB84 with loss</p>
+</li>
+<li>
+<p>Qubit BB84 with a finite number of signals sent</p>
+</li>
+<li>
+<p>Weak coherent pulse-based BB84 with decoy-state analysis</p>
+</li>
+</ul>
+<p>We also provide two math solver modules:</p>
+<ul>
+<li>
+<p>FW2StepSolver, which uses a Frank-Wolfe iteration algorithm followed by a linearization and conversion to dual in order to calculate a reliable lower bound on the quantum relative entropy. This is based on work done by our group published at https://arxiv.org/abs/1710.05511v2. </p>
+</li>
+<li>
+<p>FRGNSolver (requires the ZGNQKD solver), which uses facial reduction and a Gauss-Newton method to simplify and solve the SDP to arrive at quantum relative entropy. This solver was written by members of Henry Wolkowicz's group at the University of Waterloo and is published at https://arxiv.org/abs/2104.03847v2. Note that this solver can only handle strict equality constraints at the moment.</p>
+</li>
+</ul>
+<p>In the future, we plan to add more protocols. We also welcome custom-defined protocols and solver modules.</p>
+<h2 id="citing">Citing</h2>
+<p>If you use Open QKD Security in research, please cite our software and write in your document something like:</p>
+<pre><code>To calculate the key rate for protocol "X" we used the Open QKD Security package[#].
+</code></pre>
+<p>Here is a bibtex entry you can use:</p>
+<pre><code class="language-bib">@software{burniston_2024_14262569,
+  author       = {Burniston, John and
+                  Wang, Wenyuan and
+                  Kamin, Lars and
+                  Lin, Jie and
+                  Coles, Patrick and
+                  Metodiev, Eric and
+                  George, Ian and
+                  Li, Nicky Kai Hong and
+                  Fang, Kun and
+                  Chemtov, Max and
+                  Zhang, Yanbao and
+                  Böhm, Christopher and
+                  Winick, Adam and
+                  van Himbeeck, Thomas and
+                  Johnstun, Scott and
+                  Nahar, Shlok and
+                  Tupkary, Devashish and
+                  Pan, Shihong and
+                  Wang, Zhiyao and
+                  Corrigan, Aodhan and
+                  Kanitschar, Florian and
+                  Gracie, Laura and
+                  Gu, Shouzhen and
+                  Mathur, Natansh and
+                  Upadhyaya, Twesh and
+                  Lutkenhaus, Norbert},
+  title        = {Open {QKD} {S}ecurity: {V}ersion 2.0.2},
+  month        = dec,
+  year         = 2024,
+  publisher    = {Zenodo},
+  version      = {v2.0.2},
+  doi          = {10.5281/zenodo.14262569},
+  url          = {https://doi.org/10.5281/zenodo.14262569}
+  swhid        = {swh:1:dir:ce63165f716a15a425fbadc208e27934cc66be10
+                   ;origin=https://doi.org/10.5281/zenodo.14262568;vi
+                   sit=swh:1:snp:ea6ece4519d009abf5ae6b7c084f97ba9d3f
+                   14c2;anchor=swh:1:rel:54e7860c1d1e613f2e7a075653d1
+                   2fa44f1226fa;path=/
+                  },
+}
+</code></pre>
+<h2 id="contributing">Contributing</h2>
+<p>If you would like to contribute, please contact Professor Lütkenhaus at lutkenhaus.office@uwaterloo.ca.</p>
+<h2 id="license">License</h2>
+<p>OpenQKDSecurity is licensed under the MIT license. See the LICENSE file for details.</p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>This work has been performed at the Institute for Quantum Computing (IQC), which is supported by Innovation, Science and Economic Development (ISED) Canada. This research has been supported by NSERC Collaborative Research and Development (CRD) Program and Discovery Grants Program. Financial support for this project has been partially provided by Huawei Technologies Canada Co., Ltd.</p></div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="installation/" class="btn btn-neutral float-right" title="Installation">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+      <span><a href="installation/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2024-12-22 01:35:28.917939+00:00
+-->

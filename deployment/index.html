@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Deployment - OpenQKDSecurity V2</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Deployment";
+        var mkdocs_page_input_path = "deployment.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> OpenQKDSecurity V2
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Deployment</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#local-desktop-recommended-for-regular-use">Local desktop (Recommended for regular use)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#online-ide">Online IDE</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#packaged-container">Packaged container</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../user_guide/">User Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../research_code/">Code of Research Papers</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../contribute/">Contribute</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">OpenQKDSecurity V2</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Deployment</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div><h1 id="deployment">Deployment</h1>
+<p>You can run OpenQKDSecurity using 3 methods. Each is a solution to a different use case, so use the pros/cons list to evaluate your situation and pick the best method for you. The tradeoffs usually consider the computational power, ease of access and dependency conflicts.</p>
+<h2 id="local-desktop-recommended-for-regular-use">Local desktop (Recommended for regular use)</h2>
+<p>If you have followed the installation process, then you can open your Matlab on your desktop and navigate to the path of the OpenQKDSecurity folder to run a local instance of the project.</p>
+<blockquote>
+<p><strong>PROS</strong></p>
+<ul>
+<li>The local instance works with all 4 dependencies, assuming you install MOSEK and require it.</li>
+</ul>
+<p><strong>CONS</strong></p>
+<ul>
+<li>The packages may require different versions, that are in conflict with current versions installed on your desktop needed to run other projects. </li>
+</ul>
+</blockquote>
+<h2 id="online-ide">Online IDE</h2>
+<p>You can use OpenQKDSecurity from an online IDE without requiring any installation. </p>
+<ul>
+<li>
+<p>Visit this website and login using your Matlab Online account credentials.</p>
+</li>
+<li>
+<p>Run <code>installDependencies.m</code> and <code>addPath.m</code> before using the IDE.</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>PROS</strong></p>
+<ul>
+<li>The online IDE requires no installation on the user's part. It's convenient for temporary usage from any device with internet access.</li>
+</ul>
+<p><strong>CONS</strong></p>
+<ul>
+<li>It does not have the MOSEK package (4th dependency) installed due to requiring an individual user license -- although MOSEK is optional for OpenQKDSecurity.</li>
+</ul>
+</blockquote>
+<h2 id="packaged-container">Packaged container</h2>
+<p>OpenQKDSecurity packaged as a container is a solution for dependency conflicts of Matlab packages. You can also spin up multiple instances of the container using the script we provide.</p>
+<ul>
+<li>
+<p>Ensure that you have Docker Engine and Python installed.</p>
+</li>
+<li>
+<p>Download the script and run <code>py OpenQKDSecurity.py --install</code> to download OpenQKDSecurity and the first 3 dependencies. </p>
+</li>
+<li>
+<p>Run <code>py OpenQKDSecurity.py --spinup</code> to launch a container and <code>py OpenQKDSecurity.py --spindown</code> to kill it after use if no longer needed.</p>
+</li>
+<li>
+<p>Login using your Matlab Online account credentials, and for the first time run <code>installDependencies.m</code> and <code>addPath.m</code>.</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>PROS</strong></p>
+<ul>
+<li>
+<p>Containerized OpenQKDSecurity allows you to run the project independent of the versions of Matlab and dependencies installed on your local desktop. For example, OpenQKDSecurity requires Matlab &gt;= 2020b and QETLAB &gt; v0.9. You can still run your other projects requiring lower versions of Matlab/QETLAB while running OpenQKDSecurity as a self-contained package with the higher versions. You do need to resolve dependency conflicts.</p>
+</li>
+<li>
+<p>The packaged container is lightweight in terms of memory compared to the local desktop (500MB vs ~4.5GB).</p>
+</li>
+</ul>
+<p><strong>CONS</strong></p>
+<ul>
+<li>
+<p>Packaged container is a bit more advanced, requiring knowledge of the command line to run a python script that will launch the container.</p>
+</li>
+<li>
+<p>It does not have the MOSEK package (4th dependency) installed due to requiring an individual user license -- although MOSEK is optional for OpenQKDSecurity.</p>
+</li>
+</ul>
+</blockquote></div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../installation/" class="btn btn-neutral float-left" title="Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../user_guide/" class="btn btn-neutral float-right" title="User Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../installation/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../user_guide/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
