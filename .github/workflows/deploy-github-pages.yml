@@ -1,7 +1,7 @@
 name: Build GitHub Pages
 on:
   push:
-    branches: [ "main", "oqkds_website", "test-oqkds" ]
+    branches: [ "deact-branch"]
   workflow_dispatch:
 permissions:
   contents: write
