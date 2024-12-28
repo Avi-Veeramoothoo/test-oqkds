@@ -4,7 +4,7 @@ name: Deploy to heroku.
 # Run workflow on every push to main branch.
 on:
   push:
-    branches: ["deactivated-workflow"]
+    branches: ["fast_sandbox"]
 
 # Your workflows jobs.
 jobs:
