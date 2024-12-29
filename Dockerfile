@@ -38,5 +38,8 @@ RUN chown -R 1000:1000 /usr/src/matlab-code
 WORKDIR /usr/src/matlab-code
 USER matlab
 
+# Heroku sets $PORT at runtime, but we can EXPOSE a placeholder
+EXPOSE 8080
+
 # Run the main MATLAB script when the container starts
 CMD ["matlab", "-batch", "dummy"]
