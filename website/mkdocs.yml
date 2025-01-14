@@ -7,7 +7,6 @@ nav:
   - Announcements: announcements.md
   - Code of Research Papers: research_code.md
   - Contribute: contribute.md
-  - New Page: newpage.md
 theme: readthedocs
 markdown_extensions:
   - attr_list
