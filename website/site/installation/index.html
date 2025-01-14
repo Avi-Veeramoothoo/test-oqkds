@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Installation - OpenQKDSecurity V2</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Installation";
+        var mkdocs_page_input_path = "installation.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> OpenQKDSecurity V2
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Installation</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#openqkdsecurity-package">OpenQKDSecurity package</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#dependencies">Dependencies</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#saving-installation">Saving installation</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../deployment/">Deployment</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../user_guide/">User Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../announcements/">Announcements</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../research_code/">Code of Research Papers</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../contribute/">Contribute</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">OpenQKDSecurity V2</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Installation</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div><h1 id="installation">Installation</h1>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before installing the software, ensure you have the latest version of MATLAB installed on your machine.
+Our software requires <em>at least version 2020b</em> for full functionality, but installing the latest version is preferable.</p>
+<h2 id="openqkdsecurity-package">OpenQKDSecurity package</h2>
+<p>To install the OpenQKDSecurity package, download the repository on GitHub as a zip file and unzip it to a preferred directory. This can be done on the main page of the repository by pressing the green “Code” button at the top of the page and then selecting <a href="https://github.com/JBurniston/openQKDSecurityV2/archive/refs/heads/main.zip">"Download ZIP"</a>.</p>
+<h2 id="dependencies">Dependencies</h2>
+<p>Our software has the following dependencies for its default settings:</p>
+<ul>
+<li><a href="https://cvxr.com/cvx/download">CVX</a> v2.2, a library for solving convex optimization problems in MATLAB.</li>
+<li><a href="https://github.com/nathanieljohnston/QETLAB">QETLAB</a> <em>above</em> v0.9, a MATLAB toolbox for operations involving quantum channels and entanglement. Note that you cannot use the version from their website as it has bugs associated with implementing Choi matrices. <em>You must use their latest copy on GitHub</em>. At the time of writing, this means downloading their code with the green "code" button and <em>not</em> the v0.9 release.</li>
+<li><a href="https://www.math.uwaterloo.ca/~hwolkowi/henry/reports/ZGNQKDmainsolverUSEDforPUBLCNJuly31">ZGNQKD</a> solver (optional), an alternative to our Frank-Wolfe solver for quantum relative entropy. Currently, it only supports equality constraints. Download the zip and the "Solver" folder and sub-folders to your path.</li>
+<li><a href="https://www.mosek.com">MOSEK</a> (optional), a more advanced semidefinite programming (SDP) solver than the default (SDPT3) used in CVX. Note that the MOSEK solver can be downloaded together with CVX, but requires a separate license to use. See <a href="https://cvxr.com/cvx/doc/mosek.html">this page</a> for more information.</li>
+</ul>
+<p>To install CVX, QETLAB and ZGNQKD, you can run <code>installDependencies.m</code> to automate their installation. For MOSEK, you need to install it manually to input its license. Alternatively, you can install all 4 manually. Please refer to the documentation of each of these software packages for installation instructions.</p>
+<h2 id="saving-installation">Saving installation</h2>
+<p>Next, ensure that our software and the above dependencies are on your MATLAB path. To place a folder on your path, navigate to it in MATLAB, then right-click and select "Add to Path &gt; Selected folder and Subfolders". Make sure you do this for OpenQKDSecurity, QETLAB, and CVX. We also recommend you run "cvx_setup" to check if CVX is properly configured and which solvers are available.</p>
+<p>Before you close MATLAB, go to "Home &gt; Environment &gt; Set Path" and click "save" at the bottom. If you don't, then you have to add everything to your path each time you restart MATLAB.</p>
+<blockquote>
+<p><strong>IMPORTANT</strong><br>
+We strongly encourage you to run <code>testInstall.m</code> at this point to check for basic installation issues.</p>
+</blockquote></div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../deployment/" class="btn btn-neutral float-right" title="Deployment">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../deployment/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
