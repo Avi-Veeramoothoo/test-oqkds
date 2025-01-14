@@ -4,7 +4,7 @@ nav:
   - Installation: installation.md
   - Deployment: deployment.md
   - User Guide: user_guide.md
-  - Announcements: announcement.md
+  - Announcements: announcements.md
   - Code of Research Papers: research_code.md
   - Contribute: contribute.md
 theme: readthedocs
